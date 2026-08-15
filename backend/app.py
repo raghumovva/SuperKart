@@ -22,7 +22,7 @@ def predict():
     #Get the data from the request
     input_data = request.get_json()
     #convert the data to a pandas dataframe
-    data = pd.DataFrame(input_data).
+    data = pd.DataFrame(input_data)
     #make a prediction
     prediction = model.predict(data).tolist()[0]
     return jsonify({"prediction": prediction})
